@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+     <div class="container">
+     <div class="edit-head">
+          <h1>Edit Blog</h1>
+<p>Update your article below.</p></div>
+<div class="edit-container">
+     <form action="/edit/<%=post.id%>" method="POST">
+       <label for="title">Title : </label> <br>
+       <input 
+            type="text"
+            id="title"
+            name="title"
+            value="<%= post.title %>"
+            placeholder="Enter your blog's title">
+            <br><br>
+       <label for="content">Content : </label> 
+       <textarea 
+            name="content"
+            id="content"
+            rows="10"
+            cols="50"
+            placeholder="Write your blog here..." ><%= post.content %></textarea>
+            <br><br>
+       <input class="changes btn"type ="Submit" value="Save changes">
+       <a href="/" class="cancel btn">Cancel</a>
+       </form></div></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="card-heading">Blog Application
+ <p> Welcome to my blog—a place where I share insights, ideas, and experiences from my journey in technology, learning, and personal growth. Each post is written to inform, inspire, and encourage continuous curiosity.</p></div>
+    <div id="form" class="card-filling "> 
+     <div class="create"><h2>Create Article</h2></div>
+    <form action="/create" method="POST">
+       <label for="title">Title : </label> <br>
+       <input 
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter your blog's title">
+            <br><br>
+       <label for="content">Content : </label> 
+       <textarea 
+            name="content"
+            id="content"
+            rows="10"
+            cols="50"
+            placeholder="Write your blog here..." ></textarea>
+            <br><br>
+            <div class="button-container"> <input class="btn"type="Submit" value="Create Post"></div>
+      
+    </form></div>
+    <h1>All Blogs</h1>
+    <div id="posts" >
+
+     <%posts.forEach(post=>{%>
+          <div class="card-posts">
+          <!-- <h2><%=post.id%></h2> -->
+          <p id="post-title"><%=post.title%></p>
+          <p><%=post.content%></p>
+         <div class="editdelete">
+          <a class ="edit btn"href="/edit/<%= post.id %>">Edit</a>
+          <form action="/delete/<%= post.id %>" method="POST"><button class= "delete btn" type="submit">Delete</button></form></div></div> 
+    <% }); %>
+</div>
+               </div>
+</div>
+   <div id="section"></div>
+</body>
+</html>
