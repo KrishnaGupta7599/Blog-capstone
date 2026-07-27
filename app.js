@@ -52,6 +52,7 @@ app.post("/delete/:id",(req,res)=>
 posts.splice(index,1);
 res.redirect("/");
 })
+
 app.listen(port,()=>
 {
     console.log(`It is running on the port ${port}`);

@@ -185,3 +185,11 @@ transform:translateY(-4px);
     padding: 20px;
     border-radius: 40px;
 }
+.blog_ai{
+  display:flex;
+  align-items :center;
+  gap:20px;
+}
+.ai-btn{
+    margin-left:auto
+}
